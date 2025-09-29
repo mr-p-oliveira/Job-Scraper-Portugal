@@ -1,0 +1,24 @@
+scraper:
+  headless: true
+  wait_time: 10
+  output_file: "jobs-{date}.csv"
+  user_agent: "Mozilla/5.0 (X11; Linux armv7l) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0 Safari/537.36"
+  rate_limit: 0
+  driver_path: ""
+
+  logging:
+    suppress_chrome: true   # hide Chrome/DevTools logs
+    log_level: 3            # 0=ALL, 1=INFO, 2=WARNING, 3=ERROR, 4=FATAL
+
+  query:
+    #-------- Sapo Empregos ------------
+    local: "porto"
+    pesquisa: "administrativo"
+    hora: "full-time"
+    ordem: "mais-recentes"  # relevancia, mais-recentes, nome-a-z
+
+  #-------- Net-Empregos-------------
+    zona : 2       # Porto zona 2 , Lisboa zona 1 -> Codigo interno
+    categoria: 0   # Não vale a pena mexer
+    tipo: 1        # 1- Full-Time ; 2- Part-Time; 3-Estágio
+  output_formats: ["json"] # json , csv
