@@ -1,7 +1,7 @@
 
 <h1 align="center"> Job Scraper - Sistema de Recolha de Dados de Emprego</h1>
 
-🌍 Idiomas: [:uk:English](README.en.md) | [🇵🇹 Português](README.md)
+🌍 Idiomas: [:uk: English](README.en.md) | [🇵🇹 Português](README.md)
 
 <div align="center">
   
