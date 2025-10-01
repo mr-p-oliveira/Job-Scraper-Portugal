@@ -1,6 +1,8 @@
 
 <h1 align="center"> Job Scraper - Sistema de Recolha de Dados de Emprego</h1>
 
+🌍 Idiomas: [:uk:English](README.en.md) | [🇵🇹 Português](README.md)
+
 <div align="center">
   
   <a href="">[![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://python.org/) </a>
