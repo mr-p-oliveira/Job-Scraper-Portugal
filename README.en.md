@@ -8,6 +8,8 @@
   
 </div>
 
+
+### 🌍 Idiomas: [:uk: English](README.en.md) | [🇵🇹 Português](README.md)
 ## 📌 Job Scraper
 
 This **job scraper** is a Python project for the automated collection of job listings.  
