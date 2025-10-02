@@ -53,8 +53,16 @@ def build_driver(config):
     return webdriver.Chrome(service=service, options=options)
 
 
+def output_dir():
+    # ( ͡° ͜ʖ ͡°) sure...
+    output_files = "Output files"
+    if not os.path.exists(output_files):
+        os.makedirs(output_files)
+    return output_files
+
 def save_csv(all_results, header, site_name, pesquisa, today_str, delimiter=";"):
-    filename_csv = f"{pesquisa}_{site_name}_jobs_{today_str}.csv"
+    folder = output_dir()
+    filename_csv = os.path.join(folder, f"{pesquisa}_{site_name}_jobs_{today_str}.csv")
     with open(filename_csv, "w", newline="", encoding="utf-8-sig") as f:
         writer = csv.writer(f, delimiter=delimiter)
         writer.writerow(header)
@@ -62,9 +70,9 @@ def save_csv(all_results, header, site_name, pesquisa, today_str, delimiter=";")
     print(f"📄 CSV saved → {filename_csv}")
     return filename_csv
 
-
 def save_json(all_results, header, site_name, pesquisa, today_str):
-    filename_json = f"{pesquisa}_{site_name}_jobs_{today_str}.json"
+    folder = output_dir()
+    filename_json = os.path.join(folder, f"{pesquisa}_{site_name}_jobs_{today_str}.json")
     json_data = [dict(zip(header, row)) for row in all_results]
     with open(filename_json, "w", encoding="utf-8") as jf:
         json.dump(json_data, jf, indent=2, ensure_ascii=False)
