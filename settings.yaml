@@ -16,7 +16,8 @@ scraper:
     pesquisa: "administrativo"
     hora: "full-time"
     ordem: "mais-recentes"  # relevancia, mais-recentes, nome-a-z
-
+    data-de-publicacao: "ultimos-7-dias" # ultimas-24-horas ; ultimos-7-dias ; ultimas-15-dias ; ha-mais-de-15-dias
+    
   #-------- Net-Empregos-------------
     zona : 2       # Porto zona 2 , Lisboa zona 1 -> Codigo interno
     categoria: 0   # Não vale a pena mexer

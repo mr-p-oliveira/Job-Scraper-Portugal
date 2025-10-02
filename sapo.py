@@ -20,7 +20,8 @@ def build_url(config):
         "pesquisa": config["query"]["pesquisa"],
         "hora": config["query"]["hora"],
         "pagina": 1,
-        "ordem": config["query"]["ordem"]
+        "ordem": config["query"]["ordem"],
+        "data-de-publicacao": config["query"]["data-de-publicacao"]
     }
     return f"{base}?{urlencode(query_params)}"
 
