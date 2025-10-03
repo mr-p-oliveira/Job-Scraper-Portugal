@@ -70,10 +70,14 @@ def parse_jobs(driver, current_page_url):
     return results
 
 
-def run_scraper():
+def run_scraper(search_term=None):
     config = load_config()
     today_str = datetime.now().strftime("%d-%m-%Y")
-    pesquisa = config["query"]["pesquisa"].replace(" ", "_")
+    # ┌∩┐(◣_◢)┌∩┐ Run
+    if search_term:
+        config["query"]["pesquisa"] = search_term
+
+    pesquisa = config["query"]["pesquisa"]
 
     url = build_url(config)
     all_results = []

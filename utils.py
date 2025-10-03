@@ -52,9 +52,7 @@ def build_driver(config):
     )
     return webdriver.Chrome(service=service, options=options)
 
-
 def output_dir():
-    # ( ͡° ͜ʖ ͡°) sure...
     output_files = "Output files"
     if not os.path.exists(output_files):
         os.makedirs(output_files)
