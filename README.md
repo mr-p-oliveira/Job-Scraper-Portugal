@@ -18,8 +18,8 @@ Este **scraper de empregos** é um projeto em Python para a recolha automatizada
 Foi criado apenas para fins educativos de forma a criar um sistema modular para automação de recolha de dados.
 
 > [!WARNING]
-> Este projeto destina-se apenas a fins de aprendizagem e investigação. 
-> Consulte sempre os **Termos de Serviço** de um site antes de automatizar ou recolher dados.  
+> Este projeto destina-se apenas a fins de aprendizagem e investigação.  <br />
+> Consulte sempre os **Termos de Serviço** de um site antes de automatizar ou recolher dados.   <br />
 > Utilize de forma responsável.
 
 ## Funcionalidades
@@ -75,13 +75,47 @@ query:
     tipo: 1                   # Tipo de contrato: 1-Full-Time, 2-Part-Time, 3-Estágio
   output_formats: ["json"]    # Formatos suportados: json, csv
 ```
+---
+## Ficheiro de keywords 🔑
+
+Para agilizar operações de monitorização em escala, o sistema admite a definição de termos de pesquisa em ficheiros `.txt`, assegurando processamento automatizado e contornando modificações manuais no `settings.yaml`.
+📁  O sistema aceita qualquer nome de ficheiro .txt (exemplo `trabalhos.txt`)
+
+1. Ficheiro
+   
+ Crie um ficheiro de texto (ex: keywords.txt) com os keyword alvo:
+   ```text
+   Engenheiro+biomédico
+   Dispositivos+médicos
+   Biossensores
+   Nanotecnologia
+   ```
+
+> [!WARNING]
+> Extensão obrigatória: `.txt`.   <br />
+> Ficheiro não pode estar vazio.  <br />
+> Cada linha representa um termo de pesquisa distinto.
 
 ## ▶️ Executar
+
+Utilizando configuração padrão (settings.yaml):
 
 ```bash
 python run_scraper.py netempregos
 python run_scraper.py sapo
 ```
+Com ficheiro personalizado de keywords: 
+
+```bash
+# Com ficheiro personalizado (qualquer nome)
+python run_scraper.py netempregos meus_trabalhos.txt
+
+# Com outro ficheiro
+python run_scraper.py sapo termos_tecnicos.txt
+
+```
+
+
 
 ### Exemplo de output
 
