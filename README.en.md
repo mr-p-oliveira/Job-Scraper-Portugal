@@ -85,14 +85,43 @@ query:
   output_formats: ["json"]    # Supported formats: json, csv
 
 ```
+## Keywords File 🔑
 
+To streamline large-scale monitoring operations, the system supports defining search terms through .txt files, enabling automated processing and avoiding manual modifications to `settings.yaml`.
+📁 The system accepts any file with a `.txt` extension (examples: `jobs.txt`)
+
+1. File Preparation
+   
+  Create a text file with your desired search terms:
+   ```text
+   Engenheiro+biomédico
+   Dispositivos+médicos
+   Biossensores
+   Nanotecnologia
+   ```
+> [!WARNING]
+> File extension must be `.txt`.   <br />
+> File cannot be empty.  <br />
+> Each line represents a distinct search term.
 
 ## ▶️ Run
+
+Using default configuration (settings.yaml):
 
 ```bash
 
  python run_scraper.py netempregos
  python run_scraper.py sapo
+
+```
+With custom keywords file:
+
+```bash
+# Execute with custom keywords file
+python run_scraper.py netempregos meus_trabalhos.txt
+
+# Execute with alternative keywords file
+python run_scraper.py sapo termos_tecnicos.txt
 
 ```
 
