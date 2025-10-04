@@ -1,7 +1,6 @@
 import csv
 import json
 import os
-import time
 import yaml
 
 from urllib.request import urlopen
